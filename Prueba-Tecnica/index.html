@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PRUEBA TECNICA - POKEDEX</title>
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="https://api.whatsapp.com/send?phone=7225547013&text=Hola, prometo dar lo mejor de mi" target="_blank" class="nav-menu-link nav-link nav-menu-link_active"
+                >Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="my_name">
+                <h1>POKEDEX</h1>
+                <h3>PRUEBA TECNICA - ISAAC RENE MONTES DE OCA MARAVILLA</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <form action="" onsubmit="searchPokemon(event)">
+                    <input type="text" name="pokemon" autocomplete="off">
+                    <button href="#" class="boton_search"><img src="img/pokebola.png" alt="Buscar" width="30px"></button>
+                </form>
+            </div>
+
+        <div class="row">
+            <div class="pokedex pokedex_img">
+                <div pokeball-card class="pokeball-card">
+                    <div pokeball-name>Pokedex</div>
+                    <div pokeball-img-container class="img-container">
+                        <img pokeball-img class="pokeball-img" src="img/quien es este pokemon.webp"/>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container_of_dates">
+                <div class="pokedex pokedex_date">
+                <div pokeball-id></div>
+                <div pokeball-types class="pokeball-types"></div>
+                <div pokeball-stats class="pokeball-stats"></div>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
