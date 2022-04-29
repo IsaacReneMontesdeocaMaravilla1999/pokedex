@@ -1,3 +1,4 @@
+//Menu de hamburguesa responsive
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -21,6 +22,7 @@ const pokeStats = document.querySelector('[pokeball-stats]');
 const colors = {
 };
 
+//Hace la busqueda de los personajes a traves de la Api
 const searchPokemon = event => {
     event.preventDefault();
     const { value } = event.target.pokemon;
@@ -30,6 +32,7 @@ const searchPokemon = event => {
         .catch(err => renderNotFound())
 }
 
+//Todos los datos se declaran para aparecer posteriormente
 const renderPokemonData = data => {
     const sprite =  data.sprites.front_default;
     const { stats, types } = data;
@@ -47,6 +50,7 @@ const setCardColor = types => {
     pokeImg.style.backgroundSize = ' 5px 5px';
 }
 
+//Es la zona donde se genera el tipo de cada Pokemon
 const renderPokemonTypes = types => {
     pokeTypes.innerHTML = '';
     types.forEach(type => {
@@ -57,6 +61,7 @@ const renderPokemonTypes = types => {
     });
 }
 
+//Genera los elementos al momento de buscarlos
 const renderPokemonStats = stats => {
     pokeStats.innerHTML = '';
     stats.forEach(stat => {
@@ -71,6 +76,7 @@ const renderPokemonStats = stats => {
     });
 }
 
+//Zona donde indica si los datos fueon no encontrados, es decir aparece vacio en caso de ser asi.
 const renderNotFound = () => {
     pokeName.textContent = 'Lo siento, pokemon no encontrado';
     pokeImg.style.background =  'rgb(199, 194, 194)';
